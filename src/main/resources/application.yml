@@ -1,0 +1,30 @@
+server:
+  port: 7028
+
+#数据库配置
+dbconfig:
+  dbmysql:
+      driver: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.0.8:2506/cw?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 123.abc.X
+
+spring:
+  profiles:
+    active: dev
+  redis:
+    host: 172.30.34.49
+    port: 6379
+    password:
+
+#页面编码
+spring.http.encoding.force: true
+spring.http.encoding.charset: UTF-8
+spring.http.encoding.enabled: true
+server.tomcat.uri-encoding: UTF-8
+
+#日志配置
+logging.level.com.ax.service.daomain: debug
+logging.level.org.springframework.web: debug
+logging.level.org.springframework.transaction: debug
+logging.level.org.mybatis: debug

@@ -1,0 +1,17 @@
+server:
+  port: 8028
+
+#数据库配置
+dbconfig:
+  dbmysql:
+      driver: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.0.8:2506/cw?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 123.abc.X
+
+
+#日志配置
+logging.level.com.ax.service.daomain: info
+logging.level.org.springframework.web: info
+logging.level.org.springframework.transaction: info
+logging.level.org.mybatis: info

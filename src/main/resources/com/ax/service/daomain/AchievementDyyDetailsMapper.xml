@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ax.service.daomain.AchievementDyyDetailsMapper">
+  <resultMap id="BaseResultMap" type="com.ax.service.model.po.AchievementDyyDetails">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="base_money" jdbcType="DECIMAL" property="baseMoney" />
+    <result column="class2" jdbcType="INTEGER" property="class2" />
+    <result column="class2_name" jdbcType="VARCHAR" property="class2Name" />
+    <result column="achievement" jdbcType="DECIMAL" property="achievement" />
+    <result column="commission" jdbcType="DECIMAL" property="commission" />
+    <result column="custom_name" jdbcType="VARCHAR" property="customName" />
+    <result column="month" jdbcType="VARCHAR" property="month" />
+    <result column="tidian" jdbcType="DECIMAL" property="tidian" />
+    <result column="grade" jdbcType="VARCHAR" property="grade" />
+    <result column="performance" jdbcType="DECIMAL" property="performance" />
+    <result column="special_money" jdbcType="DECIMAL" property="specialMoney" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="userid" jdbcType="INTEGER" property="userid" />
+    <result column="checkstatus" jdbcType="INTEGER" property="checkstatus" />
+    <result column="joindate" jdbcType="TIMESTAMP" property="joindate" />
+    <result column="dirid" jdbcType="INTEGER" property="dirid" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="money_type" jdbcType="INTEGER" property="moneyType" />
+    <result column="uesrtype" jdbcType="INTEGER" property="uesrtype" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ax.service.model.po.AchievementDyyDetails">
+    insert into achievement_dyy_details (id, base_money, class2, 
+      class2_name, achievement, commission, 
+      custom_name, month, tidian, 
+      grade, performance, special_money, 
+      username, userid, checkstatus, 
+      joindate, dirid, type, 
+      money_type, uesrtype)
+    values (#{id,jdbcType=INTEGER}, #{baseMoney,jdbcType=DECIMAL}, #{class2,jdbcType=INTEGER}, 
+      #{class2Name,jdbcType=VARCHAR}, #{achievement,jdbcType=DECIMAL}, #{commission,jdbcType=DECIMAL}, 
+      #{customName,jdbcType=VARCHAR}, #{month,jdbcType=VARCHAR}, #{tidian,jdbcType=DECIMAL}, 
+      #{grade,jdbcType=VARCHAR}, #{performance,jdbcType=DECIMAL}, #{specialMoney,jdbcType=DECIMAL}, 
+      #{username,jdbcType=VARCHAR}, #{userid,jdbcType=INTEGER}, #{checkstatus,jdbcType=INTEGER}, 
+      #{joindate,jdbcType=TIMESTAMP}, #{dirid,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, 
+      #{moneyType,jdbcType=INTEGER}, #{uesrtype,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, base_money, class2, class2_name, achievement, commission, custom_name, 
+    month, tidian, grade, performance, special_money, username, userid, checkstatus, 
+    joindate, dirid, type, money_type, uesrtype
+    from achievement_dyy_details
+  </select>
+</mapper>

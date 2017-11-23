@@ -1,0 +1,8 @@
+#数据库配置
+dbconfig:
+  dbmysql:
+      driver: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.0.8:2506/cw?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 123.abc.X
+
