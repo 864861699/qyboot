@@ -5,17 +5,17 @@ server:
 dbconfig:
   dbmysql:
       driver: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.0.8:2506/cw?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      url: jdbc:mysql://localhost:3306/qydb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
       username: root
-      password: 123.abc.X
+      password: 123456
 
 spring:
   profiles:
     active: dev
   redis:
-    host: 172.30.34.49
+    host: localhost
     port: 6379
-    password:
+    password: 123456
 
 #页面编码
 spring.http.encoding.force: true
@@ -28,3 +28,21 @@ logging.level.com.ax.service.daomain: debug
 logging.level.org.springframework.web: debug
 logging.level.org.springframework.transaction: debug
 logging.level.org.mybatis: debug
+
+spring.session.store-type: redis
+
+
+ftp:
+  #访问地址
+  host: http://172.30.34.49:2379
+  #FTP地址
+  addr: 172.30.34.49
+  #FTP端口
+  port: 21
+  #用户
+  user: aixiang
+  #密码
+  pass: 7788
+
+spring.http.maxFileSize: 30Mb
+spring.http.multipart.maxRequestSize: 100Mb
