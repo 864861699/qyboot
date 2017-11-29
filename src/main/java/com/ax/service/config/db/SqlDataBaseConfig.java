@@ -47,6 +47,7 @@ public class SqlDataBaseConfig {
         sessionFactory.setDataSource(dataSource);
         sessionFactory.setPlugins(plugins());
         org.apache.ibatis.session.Configuration config = new org.apache.ibatis.session.Configuration();
+        config.setCallSettersOnNulls(true);
         sessionFactory.setConfiguration(config);
         return sessionFactory.getObject();
     }
